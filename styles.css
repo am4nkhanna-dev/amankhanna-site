@@ -89,7 +89,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .hero-copy { display: grid; gap: 1.4rem; min-width: 0; }
 .hero h1 { color: var(--white); }
 .hero .lead { color: var(--on-dark); max-width: 34rem; }
-.hero-proof { display: grid; gap: 0.6rem; }
+.hero-proof { display: grid; gap: 0.9rem; }
 .hero-proof .badge-slot { width: 260px; min-height: 0; }
 .hero-note { color: var(--on-dark-soft); font-size: 1rem; }
 .hero-note a { color: var(--gold-pale); }
@@ -209,9 +209,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .doctify-slot iframe { display: block; max-width: 100%; }
 .rhino-rating { max-width: 320px; }
 .awards { display: flex; gap: 0.75rem; text-decoration: none; }
-.awards img { width: 150px; border-radius: 6px; }
+.awards img { width: 190px; border-radius: 6px; }
 .awards-row { margin-top: 1.5rem; }
-.hero-proof .awards img { width: 138px; }
+.hero-proof .awards img { width: 200px; }
+.hero-proof .awards { flex-wrap: wrap; }
+.breakdown { width: 412px; }
+.book-link { font-weight: 600; }
+.stack-tight { display: grid; gap: 0.5rem; }
 .band.dark .facts { border-top-color: var(--navy-line); }
 .band.dark .facts div { border-bottom-color: var(--navy-line); }
 .band.dark .facts dt { color: var(--white); }
