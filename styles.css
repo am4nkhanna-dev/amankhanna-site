@@ -104,9 +104,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Treatment areas on home */
 .areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 2rem; }
-.area { padding: 1.5rem 0 0.5rem; border-top: 1px solid var(--ink); display: grid; gap: 0.8rem; align-content: start; min-width: 0; }
+/* each card shares the row lines of its neighbours, so headings, lists and links line up */
+.area { padding: 1.5rem 0 0.5rem; border-top: 1px solid var(--ink); display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0.8rem; align-content: start; min-width: 0; }
 .area h3 { font-size: 1.5rem; }
-.area ul { margin: 0; padding-left: 1.1rem; color: var(--slate); display: grid; gap: 0.3rem; }
+.area ul { margin: 0; padding-left: 1.1rem; color: var(--slate); display: grid; gap: 0.3rem; align-content: start; }
 .area .more { font-weight: 600; margin-top: 0.4rem; }
 
 /* About */
