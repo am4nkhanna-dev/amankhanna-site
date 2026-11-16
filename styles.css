@@ -266,3 +266,10 @@ html { overflow-x: clip; }
 @media (max-width: 340px) {
   .hero .actions .btn { font-size: 0.74rem; }
 }
+
+/* Three hospitals side by side: rows line up across the cards */
+.places-3 .place { grid-row: span 6; grid-template-rows: subgrid; row-gap: 0.3rem; align-content: start; }
+@media (max-width: 900px) {
+  .places.places-3 { grid-template-columns: minmax(0, 1fr); }
+  .places-3 .place { grid-row: auto; grid-template-rows: none; }
+}
