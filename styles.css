@@ -234,7 +234,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .treat-main { display: grid; gap: clamp(2.5rem, 5vw, 4rem); min-width: 0; }
 .tsec { scroll-margin-top: 92px; }
 .tsec-in { display: grid; gap: 1.25rem; }
-.tsec .topic-intro { position: static; max-width: 66ch; }
+.tsec .topic-intro { position: static; max-width: none; }
 html { overflow-x: clip; }
 .hero .lead { max-width: none; }
 .hero-proof > * { max-width: 100%; }
