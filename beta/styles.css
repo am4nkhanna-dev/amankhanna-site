@@ -349,3 +349,8 @@ html { overflow-x: clip; }
   .tsec .topic-intro h2 { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hh, 69px)); z-index: 5; background: var(--white); padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 1.4rem; }
   .doctify-float { position: static; display: inline-flex; margin-top: 1rem; box-shadow: none; }
 }
+
+/* About page: the Excellent badge sits between the awards; the reviews carousel shows reviews only */
+.about-trio { max-width: 52rem; margin-inline: auto; margin-bottom: 1.75rem; }
+.about-trio .award-tile img { max-width: 200px; }
+.about-carousel [class*="doctify_carousel_widget_left_container"] { display: none !important; }
