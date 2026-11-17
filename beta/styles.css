@@ -251,7 +251,7 @@ html { overflow-x: clip; }
 /* Phones and tablets: logo animation first, then the text, then the ratings */
 @media (max-width: 900px) {
   .hero-lower { display: contents; }
-  .hero .reveal { order: 1; margin-right: 0; }
+  .hero .hero-photo { order: 1; }
   .hero .hero-copy { order: 2; }
   .hero .hero-proof { order: 3; }
 }
@@ -289,29 +289,46 @@ html { overflow-x: clip; }
 /* ===== BETA: compact home page, sticky treatment headings, small Doctify badge ===== */
 .beta-label { position: fixed; z-index: 70; top: 0; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--midnight); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; padding: 0.1rem 0.7rem; border-radius: 0 0 6px 6px; pointer-events: none; }
 
-.hero-b-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding-block: clamp(1.75rem, 4vw, 3rem); }
-.hero-b .hero-copy { gap: 1.2rem; }
-.hero-b h1 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
-.hero-b .lead { max-width: 46rem; }
-.hero-b .reveal-top, .hero-b .hero-who { display: none; }
-.hero-portrait { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; border: 1px solid var(--navy-line); }
-.micro-pill { background: #fff; border-radius: 999px; padding: 0.2rem 0.9rem; justify-self: start; display: inline-flex; align-items: center; max-width: 100%; min-height: 36px; }
-.micro-pill .doctify-slot { overflow: hidden; }
-.hero-who img { width: 64px; height: 64px; object-fit: cover; object-position: 50% 18%; border-radius: 50%; border: 1px solid var(--navy-line); }
-.hero-who p { margin: 0; display: grid; gap: 0.1rem; font-size: 0.95rem; }
-.hero-who b { color: var(--white); font-weight: 600; }
-.hero-who span { color: var(--on-dark-soft); font-size: 0.88rem; }
 
-.area .examples { color: var(--slate); font-size: 0.98rem; margin: 0; }
-
-.about-visual { min-width: 0; }
-.about-visual .about-portrait { display: none; }
-.about-visual .reveal-about { margin-right: 0; }
-
-@media (min-width: 901px) {
-  .reviews-proof { grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
+/* Home hero: ratings on the left, photo on the right */
+.hero-photo { width: 100%; max-width: 580px; justify-self: end; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 14%; border-radius: 6px; border: 1px solid var(--navy-line); }
+.hero-lower { align-items: start; }
+@media (max-width: 900px) {
+  .hero-photo { max-width: none; justify-self: stretch; }
 }
-.reviews-proof .awards img { width: 200px; }
+
+/* Home: about and qualifications side by side */
+.about-two .facts { margin-top: 0.4rem; }
+
+/* Hospital photos: same shape for all three */
+.place-img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 4px; margin-bottom: 0.7rem; }
+.places-3 .place { grid-row: span 7; }
+
+/* Intro: logo animation plays centred, then moves to the top-left */
+.intro { display: none; }
+.intro-on .intro { display: grid; position: fixed; inset: 0; z-index: 90; place-items: center; background: #121b2c; overflow: hidden; transition: background-color 0.9s ease; }
+.intro.go { background-color: transparent; }
+.intro-frame { width: clamp(560px, 72vw, 1040px); aspect-ratio: 16 / 9; will-change: transform; }
+.intro-frame video { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.5s ease; -webkit-mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); }
+.intro-skip { position: absolute; right: 1rem; bottom: 1rem; background: transparent; color: var(--on-dark-soft); border: 1px solid var(--navy-line); border-radius: 4px; font: inherit; font-size: 0.85rem; padding: 0.35rem 0.9rem; cursor: pointer; }
+.intro.go .intro-skip { display: none; }
+.intro-on body { overflow: hidden; }
+.brand { transition: opacity 0.5s ease; }
+.intro-on:not(.intro-show-brand) .brand { opacity: 0; }
+
+/* About page: rating badge and awards on one line */
+.proof-line { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; margin-bottom: 1.75rem; }
+.proof-line .badge-slot { width: 250px; }
+.proof-line .awards img { width: 190px; }
+
+/* Booking page: awards either side of the 5-star badge */
+.badge-trio { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 1rem; align-items: center; margin-block: 1.25rem 0.5rem; max-width: 40rem; }
+.badge-trio .award-tile img { width: 100%; max-width: 170px; border-radius: 6px; margin-inline: auto; }
+.badge-trio .trio-m { justify-self: center; min-width: 0; }
+@media (max-width: 560px) {
+  .badge-trio { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .badge-trio .trio-m { grid-column: 1 / -1; grid-row: 1; }
+}
 
 /* treatments: heading stays on the left while the topics scroll */
 .treat-b { display: block; }
@@ -327,13 +344,7 @@ html { overflow-x: clip; }
 .pick h2 { font-size: 1.1rem; }
 
 @media (max-width: 900px) {
-  .hero-b-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-top: 1rem; }
-  .hero-b .reveal-top { display: block; order: -1; margin-right: 0; }
-  .hero-portrait { display: none; }
-  .hero-b .hero-who { display: flex; align-items: center; gap: 0.9rem; }
-  .about-visual .about-portrait { display: block; }
-  .about-visual .reveal-about { display: none; }
-  .tsec-in { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+    .tsec-in { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
   .tsec .topic-intro { display: contents; }
   .tsec .topic-intro h2 { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hh, 69px)); z-index: 5; background: var(--white); padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 1.4rem; }
   .doctify-float { position: static; display: inline-flex; margin-top: 1rem; box-shadow: none; }
