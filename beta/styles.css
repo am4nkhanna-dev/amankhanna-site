@@ -306,9 +306,9 @@ html { overflow-x: clip; }
 
 /* Intro: logo animation plays centred, then moves to the top-left */
 .intro { display: none; }
-.intro-on .intro { display: grid; position: fixed; inset: 0; z-index: 90; place-items: center; background: #121b2c; overflow: hidden; transition: background-color 0.9s ease; }
+.intro-on .intro { display: flex; align-items: center; justify-content: center; position: fixed; inset: 0; z-index: 90; background: #121b2c; overflow: hidden; transition: background-color 0.9s ease; }
 .intro.go { background-color: transparent; transition: background-color 0.2s ease 0.45s; }
-.intro-frame { width: clamp(560px, 72vw, 1040px); aspect-ratio: 16 / 9; will-change: transform; }
+.intro-frame { width: clamp(560px, 72vw, 1040px); aspect-ratio: 16 / 9; flex: none; will-change: transform; }
 .intro-frame video { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.5s ease; -webkit-mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); }
 .intro-skip { position: absolute; right: 1rem; bottom: 1rem; background: transparent; color: var(--on-dark-soft); border: 1px solid var(--navy-line); border-radius: 4px; font: inherit; font-size: 0.85rem; padding: 0.35rem 0.9rem; cursor: pointer; }
 .intro.go .intro-skip { display: none; }
@@ -354,3 +354,8 @@ html { overflow-x: clip; }
 .about-trio { max-width: 52rem; margin-inline: auto; margin-bottom: 1.75rem; }
 .about-trio .award-tile img { max-width: 200px; }
 .about-carousel [class*="doctify_carousel_widget_left_container"] { display: none !important; }
+
+/* Phones: keep the whole logo animation inside the screen */
+@media (max-width: 700px) {
+  .intro-frame { width: 135vw; max-width: none; }
+}
