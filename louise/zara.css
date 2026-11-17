@@ -1,0 +1,26 @@
+
+:root{--midnight:#5B21B6;--navy:#8B5CF6;--navy-line:#C4B5FD;--gold:#EDE9FE;--gold-pale:#F5F3FF;--bronze:#6D28D9;--blue:#7C3AED;--mist:#F3EEFF;--ink:#3B0F7A;--slate:#6B4BA6;--line:#D4C6F5;--on-dark:#FFFFFF;--on-dark-soft:#FFE3F1;--display:"Cormorant Garamond",Georgia,serif}
+body{background:#FBF9FF;font-weight:600}
+h1,h2,h3,.brand-name,.amount{font-weight:700!important;font-family:var(--display)}
+h1{font-family:"Pacifico","Cormorant Garamond",cursive!important;font-weight:400!important;line-height:1.25}
+.btn{font-weight:800}
+.hero{background:linear-gradient(135deg,#7C3AED 0%,#A78BFA 55%,#D8CBFF 100%)}
+.band.dark{background:linear-gradient(135deg,#5B21B6,#A78BFA)}
+.band.mist{background:#EAE2FF}
+.site-footer{background:linear-gradient(135deg,#5B21B6,#A78BFA)}
+.btn-gold{background:#fff;color:#5B21B6}
+.btn-gold:hover{background:#EDE9FE}
+.btn-line{border-color:#fff;color:#fff}
+.zara-banner{background:#E4D9FF;color:#4C1D95;text-align:center;font-weight:800;padding:.55rem 1rem;font-size:.95rem;border-bottom:3px dotted #8B5CF6}
+.zara-card{aspect-ratio:16/9;display:grid;place-content:center;text-align:center;gap:.6rem;background:rgba(255,255,255,.18);border:3px dashed #fff;border-radius:24px;padding:1rem}
+.zara-hello{font-family:"Pacifico",cursive;font-size:clamp(1.6rem,4vw,2.6rem);color:#fff}
+.zara-sub{color:#fff;font-weight:700}
+.zara-flowers{font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:.3em}
+.zara-quote{font-family:var(--display);font-size:1.5rem;font-weight:700;color:#5B21B6;text-align:center;margin:0}
+.bloom-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1rem}
+.bloom-row span{background:#EDE9FE;border-radius:18px;padding:1rem;text-align:center;font-size:2.6rem;display:grid;gap:.3rem;border:2px solid #C4B5FD}
+.bloom-row small{font-size:.9rem;font-weight:800;color:#4C1D95}
+.snow{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.snow i{position:absolute;top:-10%;font-style:normal;opacity:.85;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+.cookie-bar{display:none}

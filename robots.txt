@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /beta/
 Disallow: /zara/
+Disallow: /louise/
+Disallow: /farah/
 Sitemap: https://www.amankhanna.com/sitemap.xml
