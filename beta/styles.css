@@ -307,7 +307,7 @@ html { overflow-x: clip; }
 /* Intro: logo animation plays centred, then moves to the top-left */
 .intro { display: none; }
 .intro-on .intro { display: grid; position: fixed; inset: 0; z-index: 90; place-items: center; background: #121b2c; overflow: hidden; transition: background-color 0.9s ease; }
-.intro.go { background-color: transparent; }
+.intro.go { background-color: transparent; transition: background-color 0.15s ease 0.3s; }
 .intro-frame { width: clamp(560px, 72vw, 1040px); aspect-ratio: 16 / 9; will-change: transform; }
 .intro-frame video { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.5s ease; -webkit-mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse 62% 66% at 50% 50%, #000 55%, transparent 100%); }
 .intro-skip { position: absolute; right: 1rem; bottom: 1rem; background: transparent; color: var(--on-dark-soft); border: 1px solid var(--navy-line); border-radius: 4px; font: inherit; font-size: 0.85rem; padding: 0.35rem 0.9rem; cursor: pointer; }
