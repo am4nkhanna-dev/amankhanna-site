@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /beta/
+Disallow: /zara/
 Sitemap: https://www.amankhanna.com/sitemap.xml
