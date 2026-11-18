@@ -15,7 +15,7 @@
     if (!ov) { return; }
     if (!root.classList.contains('intro-on')) { ov.parentNode.removeChild(ov); return; }
     var v = document.getElementById('introVid'), frame = document.getElementById('introFrame'), skip = document.getElementById('introSkip');
-    var moving = false, done = false, begun = false;
+    var moving = false, done = false, begun = false, media = v, fb = false;
     window.scrollTo(0, 0);
     function finish() {
       if (done) { return; } done = true;
@@ -23,6 +23,15 @@
       root.classList.remove('intro-on');
       try { sessionStorage.setItem('ak-intro', '1'); } catch (e) {}
       if (ov.parentNode) { ov.parentNode.removeChild(ov); }
+    }
+    function fallback() {
+      /* Video blocked or unable to start (for example data saver or low power mode): show the finished logo instead */
+      if (fb || done || moving) { return; } fb = true;
+      var im = new Image();
+      im.alt = ''; im.src = 'assets/intro-end.jpg';
+      im.addEventListener('error', finish);
+      frame.appendChild(im); v.style.display = 'none'; media = im;
+      setTimeout(migrate, 1800);
     }
     function migrate() {
       if (moving || done) { return; } moving = true;
@@ -36,15 +45,16 @@
       frame.style.transition = 'transform 0.6s cubic-bezier(.65,0,.35,1)';
       frame.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
       ov.classList.add('go');
-      setTimeout(function () { root.classList.add('intro-show-brand'); v.style.opacity = '0'; }, 450);
+      setTimeout(function () { root.classList.add('intro-show-brand'); media.style.opacity = '0'; }, 450);
       setTimeout(finish, 800);
     }
     v.addEventListener('timeupdate', function () { if (v.currentTime >= 5.4) { migrate(); } });
     v.addEventListener('ended', migrate);
-    v.addEventListener('error', finish);
+    v.addEventListener('error', fallback);
     v.addEventListener('playing', function () { begun = true; });
-    var p = v.play(); if (p && p.catch) { p.catch(finish); }
-    setTimeout(function () { if (!begun) { finish(); } }, 10000);
+    v.muted = true; v.defaultMuted = true; v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
+    var p = v.play(); if (p && p.catch) { p.catch(fallback); }
+    setTimeout(function () { if (!begun) { fallback(); } }, 4000);
     setTimeout(migrate, 10000);
     if (skip) { skip.addEventListener('click', finish); }
   })();
