@@ -11,7 +11,8 @@
   if (y) { y.textContent = new Date().getFullYear(); }
   /* Home page intro: the logo animation plays centred, then flies to the top-left brand slot */
   (function () {
-    var root = document.documentElement, ov = document.getElementById('intro');
+   var root = document.documentElement, ov = document.getElementById('intro');
+   try {
     if (!ov) { return; }
     if (!root.classList.contains('intro-on')) { ov.parentNode.removeChild(ov); return; }
     var v = document.getElementById('introVid'), frame = document.getElementById('introFrame'), skip = document.getElementById('introSkip');
@@ -42,10 +43,10 @@
       var s = br.width / gw;
       var tx = br.left + br.width / 2 - gx, ty = br.top + br.height / 2 - gy;
       frame.style.transformOrigin = (gx - fr.left) + 'px ' + (gy - fr.top) + 'px';
-      frame.style.transition = 'transform 0.6s cubic-bezier(.65,0,.35,1)';
+      frame.style.transition = 'transform 0.6s cubic-bezier(.65,0,.35,1), opacity 0.35s ease';
       frame.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
       ov.classList.add('go');
-      setTimeout(function () { root.classList.add('intro-show-brand'); media.style.opacity = '0'; }, 450);
+      setTimeout(function () { root.classList.add('intro-show-brand'); frame.style.opacity = '0'; }, 450);
       setTimeout(finish, 800);
     }
     v.addEventListener('timeupdate', function () { if (v.currentTime >= 5.4) { migrate(); } });
@@ -57,6 +58,11 @@
     setTimeout(function () { if (!begun) { fallback(); } }, 4000);
     setTimeout(migrate, 10000);
     if (skip) { skip.addEventListener('click', finish); }
+    setTimeout(function () { if (!begun || v.currentTime < 0.2) { fallback(); } }, 2500);
+   } catch (err) {
+    root.classList.remove('intro-on'); root.classList.add('intro-show-brand');
+    if (ov && ov.parentNode) { ov.parentNode.removeChild(ov); }
+   }
   })();
   var vids = document.querySelectorAll('video.rv');
   if (vids.length) {

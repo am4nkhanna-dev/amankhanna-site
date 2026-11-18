@@ -14,8 +14,8 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=f2bece61">
-<script>(function(){try{var q=/[?&]intro/.test(location.search),m=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,seen=sessionStorage.getItem('ak-intro');if(!m&&(q||!seen)){document.documentElement.classList.add('intro-on');}}catch(e){}})();</script>
+<link rel="stylesheet" href="styles.css?v=ab845ced">
+<script>(function(){try{var q=/[?&]intro/.test(location.search),m=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,seen=sessionStorage.getItem('ak-intro');if(!m&&(q||!seen)){document.documentElement.classList.add('intro-on');setTimeout(function(){document.documentElement.classList.remove('intro-on');},14000);}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 <main id="main">
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-frame" id="introFrame">
-    <video id="introVid" muted playsinline preload="auto" poster="assets/intro-poster.jpg" aria-label="The Aman Khanna logo, drawn in gold on navy">
+    <video id="introVid" autoplay muted playsinline webkit-playsinline preload="auto" disablepictureinpicture poster="assets/intro-poster.jpg" aria-label="The Aman Khanna logo, drawn in gold on navy">
       <source src="assets/intro.mp4" type="video/mp4">
     </video>
   </div>
@@ -247,6 +247,6 @@
     <button type="button" class="cookie-btn cookie-decline" data-choice="declined">Decline</button>
   </div>
 </div>
-<script src="site.js?v=f2bece61"></script>
+<script src="site.js?v=ab845ced"></script>
 </body>
 </html>
