@@ -53,6 +53,7 @@ p { margin: 0; }
 .band.dark { background: var(--midnight); color: var(--on-dark); }
 .band.dark h2, .band.dark h3 { color: var(--white); }
 .band.dark a { color: var(--gold-pale); }
+.band.dark a.btn-gold, .band.dark a.btn-gold:hover { color: var(--midnight); }
 .band-head { display: grid; gap: 0.9rem; max-width: 62ch; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
 .band-head.wide { max-width: none; }
 
