@@ -39,13 +39,13 @@
       setTimeout(function () { root.classList.add('intro-show-brand'); v.style.opacity = '0'; }, 450);
       setTimeout(finish, 800);
     }
-    v.addEventListener('timeupdate', function () { if (v.currentTime >= 4.5) { migrate(); } });
+    v.addEventListener('timeupdate', function () { if (v.currentTime >= 5.4) { migrate(); } });
     v.addEventListener('ended', migrate);
     v.addEventListener('error', finish);
     v.addEventListener('playing', function () { begun = true; });
     var p = v.play(); if (p && p.catch) { p.catch(finish); }
-    setTimeout(function () { if (!begun) { finish(); } }, 6000);
-    setTimeout(migrate, 7000);
+    setTimeout(function () { if (!begun) { finish(); } }, 10000);
+    setTimeout(migrate, 10000);
     if (skip) { skip.addEventListener('click', finish); }
   })();
   var vids = document.querySelectorAll('video.rv');
