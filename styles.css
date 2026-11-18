@@ -355,3 +355,5 @@ html { overflow-x: clip; }
 @media (max-width: 700px) {
   .intro-frame { width: 135vw; max-width: none; }
 }
+
+.age-note { color: var(--slate); font-size: 0.98rem; }
