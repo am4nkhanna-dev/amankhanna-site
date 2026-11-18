@@ -25,15 +25,7 @@
       try { sessionStorage.setItem('ak-intro', '1'); } catch (e) {}
       if (ov.parentNode) { ov.parentNode.removeChild(ov); }
     }
-    function fallback() {
-      /* Video blocked or unable to start (for example data saver or low power mode): show the finished logo instead */
-      if (fb || done || moving) { return; } fb = true;
-      var im = new Image();
-      im.alt = ''; im.src = 'assets/intro-end.jpg';
-      im.addEventListener('error', finish);
-      frame.appendChild(im); v.style.display = 'none'; media = im;
-      setTimeout(migrate, 1800);
-    }
+    function fallback() { finish(); } /* video blocked or unable to start: show the normal page, no intro */
     function migrate() {
       if (moving || done) { return; } moving = true;
       var logo = document.querySelector('.brand img');
@@ -55,10 +47,9 @@
     v.addEventListener('playing', function () { begun = true; });
     v.muted = true; v.defaultMuted = true; v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
     var p = v.play(); if (p && p.catch) { p.catch(fallback); }
-    setTimeout(function () { if (!begun) { fallback(); } }, 4000);
+    setTimeout(function () { if (!begun) { fallback(); } }, 6000);
     setTimeout(migrate, 10000);
     if (skip) { skip.addEventListener('click', finish); }
-    setTimeout(function () { if (!begun || v.currentTime < 0.2) { fallback(); } }, 2500);
    } catch (err) {
     root.classList.remove('intro-on'); root.classList.add('intro-show-brand');
     if (ov && ov.parentNode) { ov.parentNode.removeChild(ov); }
