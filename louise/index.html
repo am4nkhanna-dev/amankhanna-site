@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
-<link rel="stylesheet" href="../styles.css?v=5f1f0fc2">
+<link rel="stylesheet" href="../styles.css?v=a409b2af">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"><link rel="stylesheet" href="zara.css"></head>
 <body>
 
@@ -30,6 +31,8 @@
 </header>
 
 <main id="main">
+
+
 <section class="hero">
   <div class="wrap hero-stack">
     <div class="hero-copy">
@@ -45,9 +48,7 @@
         <a class="awards" href="https://www.doctify.com/uk/specialist/aman-khanna" aria-label="Doctify Outstanding Patient Experience awards 2025 and 2026, view the Doctify profile" target="_blank" rel="noopener"><img src="../assets/doctify-2025.png" alt="Doctify Outstanding Patient Experience 2025" width="520" height="301"><img src="../assets/doctify-2026.png" alt="Doctify Outstanding Patient Experience 2026" width="520" height="300"></a>
                 <p class="hero-note">Ratings from verified patient reviews on <a href="https://www.doctify.com/uk/specialist/aman-khanna" target="_blank" rel="noopener">Doctify</a>.</p>
       </div>
-      <div class="reveal">
-        <div class="zara-card"><div class="zara-flowers">&#127801; &#127802; &#127799; &#127807; &#127804;</div><div class="zara-hello">Merry Christmas, Louise!</div><div class="zara-sub">With thanks for keeping the Heartlands ENT team in order</div><div class="zara-flowers">&#127876; &#10052;&#65039; &#127873; &#10052;&#65039; &#127876;</div></div>
-      </div>
+      <div class="zara-card"><div class="zara-flowers">&#127801; &#127802; &#127799; &#127807; &#127804;</div><div class="zara-hello">Merry Christmas, Louise!</div><div class="zara-sub">With thanks for keeping the Heartlands ENT team in order</div><div class="zara-flowers">&#127876; &#10052;&#65039; &#127873; &#10052;&#65039; &#127876;</div></div>
     </div>
   </div>
 </section>
@@ -108,20 +109,22 @@
 </section>
 
 <section class="band dark">
-  <div class="wrap about-grid">
-    <img class="portrait" src="../assets/aman-khanna.jpg" alt="Mr Aman Khanna" width="880" height="1100">
+  <div class="wrap split about-two">
     <div class="stack">
       <h2>About Mr Khanna</h2>
       <div class="prose">
         <p>Mr Khanna has been a Consultant ENT Surgeon at University Hospitals Birmingham since 2018. Before that he completed a Royal College of Surgeons accredited fellowship in rhinology and sinus surgery at Charing Cross Hospital in London.</p>
         <p>He leads ENT teaching for fourth-year medical students at the University of Birmingham and trains surgeons on sinus surgery and rhinoplasty courses across the Midlands.</p>
       </div>
+      <div class="actions"><a class="btn btn-line" href="../about.html">Read his full profile</a></div>
+    </div>
+    <div class="stack">
+      <h2>Qualifications</h2>
       <dl class="facts">
         <div><dt>Qualifications</dt><dd>FRCS (ORL-HNS), MRCS, DO-HNS, MBChB, BSc (Hons)</dd></div>
         <div><dt>Specialist register</dt><dd>Otolaryngology, since March 2017. GMC number 6118809</dd></div>
         <div><dt>NHS post</dt><dd>University Hospitals Birmingham NHS Foundation Trust</dd></div>
       </dl>
-      <div class="actions"><a class="btn btn-line" href="../about.html">Read his full profile</a></div>
     </div>
   </div>
 </section>
@@ -146,9 +149,9 @@
       <p class="muted">Private clinics run at three hospitals in Birmingham and Droitwich Spa.</p>
     </div>
     <div class="places places-3">
-      <div class="place"><h3>The Priory Hospital</h3><address>Priory Road, Edgbaston, Birmingham B5 7UG</address></div>
-      <div class="place"><h3>The Harborne Hospital</h3><address>Mindelsohn Way, Birmingham B15 2TQ</address></div>
-      <div class="place"><h3>The Droitwich Spa Hospital</h3><address>St Andrews Road, Droitwich Spa WR9 8DN</address></div>
+      <div class="place"><img class="place-img" src="../assets/hosp-priory.jpg" alt="The Priory Hospital" width="960" height="600" loading="lazy"><h3>The Priory Hospital</h3><address>Priory Road, Edgbaston, Birmingham B5 7UG</address></div>
+      <div class="place"><img class="place-img" src="../assets/hosp-harborne.jpg" alt="The Harborne Hospital" width="960" height="600" loading="lazy"><h3>The Harborne Hospital</h3><address>Mindelsohn Way, Birmingham B15 2TQ</address></div>
+      <div class="place"><img class="place-img" src="../assets/hosp-droitwich.jpg" alt="The Droitwich Spa Hospital" width="960" height="600" loading="lazy"><h3>The Droitwich Spa Hospital</h3><address>St Andrews Road, Droitwich Spa WR9 8DN</address></div>
     </div>
     <div class="actions" style="margin-top:1.75rem"><a class="btn btn-outline" href="../locations.html">All locations and directions</a></div>
   </div>
@@ -167,13 +170,20 @@
 </section>
 
 <section class="band">
-  <div class="wrap stack">
-      <h2>Teaching and courses</h2>
+  <div class="wrap split">
+    <div class="stack">
+      <h2>Teaching</h2>
       <div class="prose">
         <p>Mr Khanna is the ENT Undergraduate Year 4 Curriculum Lead at the University of Birmingham and a Clinical Simulation Tutor at University Hospitals Birmingham.</p>
-        <p>Through ORY Academy he co-organises the Medical Rhinology Meeting in Birmingham, a day for professionals who manage nose and sinus conditions.</p>
-        <p><a href="https://oryacademy.com" target="_blank" rel="noopener">Meetings and courses at ORY Academy</a></p>
       </div>
+    </div>
+    <div class="stack">
+      <h2>ORY Academy</h2>
+      <div class="prose">
+        <p>Through ORY Academy he co-organises the Medical Rhinology Meeting in Birmingham, a day for professionals who manage nose and sinus conditions.</p>
+      </div>
+      <div class="actions"><a class="btn btn-outline" href="https://oryacademy.com" target="_blank" rel="noopener">Meetings and courses at ORY Academy</a></div>
+    </div>
   </div>
 </section>
 <section class="band"><div class="wrap stack"><h2>Winter flowers for Louise</h2><div class="bloom-row"><span>&#127802;<small>Camellia</small></span><span>&#127807;<small>Hellebore</small></span><span>&#127804;<small>Snowdrop</small></span><span>&#127800;<small>Cyclamen</small></span><span>&#127801;<small>Winter rose</small></span><span>&#127876;<small>Holly</small></span></div></div></section>
@@ -226,7 +236,7 @@
     <button type="button" class="cookie-btn cookie-decline" data-choice="declined">Decline</button>
   </div>
 </div>
-<script src="../site.js?v=5f1f0fc2"></script>
+<script src="../site.js?v=a409b2af"></script>
 <div class="snow" aria-hidden="true"></div>
 <script>(function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var s=document.querySelector(".snow"),c=["&#10052;&#65039;","&#10052;","&#127800;","&#10053;"];for(var i=0;i<26;i++){var e=document.createElement("i");e.innerHTML=c[i%4];e.style.left=(Math.random()*100)+"vw";e.style.fontSize=(12+Math.random()*16)+"px";e.style.animationDuration=(9+Math.random()*12)+"s";e.style.animationDelay=(-Math.random()*20)+"s";s.appendChild(e);}})();</script>
 </body>

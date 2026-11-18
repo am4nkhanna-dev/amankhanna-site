@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /beta/
 Disallow: /zara/
 Disallow: /louise/
 Disallow: /farah/
