@@ -363,3 +363,14 @@ html { overflow-x: clip; }
 .intro-frame { position: relative; }
 .intro-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 62% 66% at 50% 50%, rgba(18, 27, 44, 0) 55%, #121b2c 100%); }
 .intro.go .intro-frame::after { background: radial-gradient(ellipse 62% 66% at 50% 50%, rgba(13, 28, 51, 0) 55%, #0d1c33 100%); }
+
+/* Home: compact clinic strip */
+.clinic-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.clinic-strip a { display: block; text-decoration: none; color: var(--ink); }
+.clinic-strip img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 4px; display: block; }
+.clinic-strip span { display: block; margin-top: 0.6rem; font-family: var(--display); font-size: 1.3rem; font-weight: 600; }
+.clinic-strip a:hover span { text-decoration: underline; }
+@media (max-width: 700px) {
+  .clinic-strip { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .clinic-strip img { aspect-ratio: 16 / 7; }
+}
