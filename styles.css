@@ -374,3 +374,8 @@ html { overflow-x: clip; }
   .clinic-strip { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .clinic-strip img { aspect-ratio: 16 / 7; }
 }
+
+/* Phones: centre the footer logo */
+@media (max-width: 700px) {
+  .footer-logo { display: block; margin-inline: auto; }
+}
