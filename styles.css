@@ -387,3 +387,6 @@ html { overflow-x: clip; }
 #request .contact-lines dd { color: var(--midnight); }
 #request .contact-lines a, #request .plain-list a { color: var(--midnight); text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 #request .contact-lines a:hover, #request .plain-list a:hover { color: var(--bronze); }
+#request .book-list { display: grid; gap: 0.9rem; list-style: none; padding: 0; margin: 0; }
+#request .book-list li { display: grid; gap: 0.15rem; }
+#request .book-list li span { font-size: 1.05rem; }
