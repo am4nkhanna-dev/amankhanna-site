@@ -304,7 +304,7 @@ html { overflow-x: clip; }
 
 /* Hospital photos: same shape for all three */
 .place-img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; border-radius: 4px; margin-bottom: 0.7rem; }
-.places-3 .place { grid-row: span 7; }
+.places-3 .place { grid-row: span 8; }
 
 /* Intro: logo animation plays centred, then moves to the top-left */
 .intro { display: none; }
@@ -398,3 +398,13 @@ html { overflow-x: clip; }
 @media (min-width: 901px) { .hero .actions { display: none; } }
 /* Treatments jump menu: one link per line on phones */
 @media (max-width: 700px) { .jump { flex-direction: column; flex-wrap: nowrap; gap: 0.6rem; } }
+
+/* Icons, WhatsApp button, hospital phone lines */
+.ico { width: 1.1em; height: 1.1em; flex: none; }
+.site-footer a.with-ico { display: inline-flex; align-items: center; gap: 0.5rem; }
+.wa-btn, .site-footer a.wa-btn { display: inline-flex; align-items: center; gap: 0.5rem; justify-self: start; background: #075E54; color: #fff; font-weight: 600; font-size: 1rem; text-decoration: none; padding: 0.5rem 0.95rem; border-radius: 999px; line-height: 1.2; }
+.wa-btn:hover, .site-footer a.wa-btn:hover { background: #0a7a6d; color: #fff; }
+.site-footer .footer-col a.wa-btn { margin-block: 0.15rem; }
+.phone-line small { display: block; font-size: 0.92rem; margin-top: 0.1rem; }
+.phone-line a { color: var(--ink); text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.portrait { box-shadow: 0 0 0 1px var(--line); }

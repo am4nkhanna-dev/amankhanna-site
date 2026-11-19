@@ -74,6 +74,12 @@
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function apply(v) {
     window.akCookieChoice = v;
+    if (v === 'accepted' && !document.getElementById('cfBeacon')) {
+      var s = document.createElement('script');
+      s.id = 'cfBeacon'; s.defer = true; s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      s.setAttribute('data-cf-beacon', '{"token": "f1adde8be0bd4f67a1f9df09eba98cd6"}');
+      document.head.appendChild(s);
+    }
     try { document.dispatchEvent(new CustomEvent('ak-cookie-choice', { detail: v })); } catch (e) {}
   }
   if (bar) {
