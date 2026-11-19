@@ -1,4 +1,5 @@
 
+(function(){var h=location.hash;if(h.length<2)return;function go(){try{var t=document.getElementById(decodeURIComponent(h.slice(1)));if(t){document.documentElement.style.scrollBehavior='auto';t.scrollIntoView();document.documentElement.style.scrollBehavior='';}}catch(e){}}window.addEventListener('load',function(){go();setTimeout(go,400);setTimeout(go,1200);});})();
 (function () {
   var btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
   if (btn && nav) {

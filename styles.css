@@ -457,5 +457,4 @@ html { overflow-x: clip; }
 }
 
 /* Anchor jumps stop below the sticky header */
-html { scroll-padding-top: 4.5rem; }
-#request { scroll-margin-top: 4.5rem; }
+#request { scroll-margin-top: 2.75rem; }
