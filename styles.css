@@ -440,3 +440,8 @@ html { overflow-x: clip; }
 @media (min-width: 901px) {
   .about-grid .portrait { margin-top: 0.6rem; }
 }
+
+/* Desktop hero photo keeps its true proportions, never cropped at the sides */
+@media (min-width: 901px) {
+  .hero-photo { align-self: start; height: auto; aspect-ratio: 900 / 1368; object-fit: contain; }
+}
