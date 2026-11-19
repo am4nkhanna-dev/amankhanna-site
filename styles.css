@@ -415,3 +415,5 @@ html { overflow-x: clip; }
 .wa-btn:hover { opacity: 0.9; background: none; }
 
 .portrait { aspect-ratio: 1 / 1; }
+
+.portrait { aspect-ratio: 5 / 4; }
