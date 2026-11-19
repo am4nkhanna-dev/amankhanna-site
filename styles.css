@@ -422,3 +422,6 @@ html { overflow-x: clip; }
 .hero-photo { aspect-ratio: 4 / 5; max-width: 440px; object-position: 50% 20%; }
 @media (max-width: 900px) { .hero-photo { max-width: 340px; justify-self: center; } }
 .portrait { aspect-ratio: 4 / 5; }
+
+.hero-photo { aspect-ratio: 900 / 1368; max-width: 400px; object-position: 50% 0; }
+@media (max-width: 900px) { .hero-photo { max-width: 320px; } }
