@@ -107,8 +107,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Treatment areas on home */
 .areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 2rem; }
 /* each card shares the row lines of its neighbours, so headings, lists and links line up */
-.area { padding: 1.5rem 0 0.5rem; border-top: 1px solid var(--ink); display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0.8rem; align-content: start; min-width: 0; }
+.area { padding: 1.5rem 0 0.5rem; border-top: 1px solid var(--ink); display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0.8rem; align-content: start; min-width: 0; }
 .area h3 { font-size: 1.5rem; }
+.area h3 a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
+.area h3 a:hover { color: var(--bronze); }
 .area ul { margin: 0; padding-left: 1.1rem; color: var(--slate); display: grid; gap: 0.3rem; align-content: start; }
 .area .more { font-weight: 600; margin-top: 0.4rem; }
 
@@ -216,7 +218,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .awards { display: flex; flex-wrap: wrap; gap: 0.75rem; text-decoration: none; }
 .awards img { width: 190px; border-radius: 6px; }
 .awards-row { margin-top: 1.5rem; }
-.hero-proof .awards img { width: 200px; }
+.hero-proof .awards img { width: min(200px, calc(50% - 0.375rem)); }
 .hero-proof .awards { flex-wrap: wrap; }
 .breakdown { width: 412px; max-width: 100%; }
 .book-link { font-weight: 600; }
@@ -391,3 +393,8 @@ html { overflow-x: clip; }
 #request .book-list li { display: grid; gap: 0.15rem; }
 #request .book-list li span { font-size: 1.05rem; }
 #request .book-list small { display: block; font-size: 0.92rem; color: var(--slate); margin-top: 0.1rem; }
+
+/* The header already carries the appointment button on desktop, so the hero buttons are for the phone menu layout only */
+@media (min-width: 901px) { .hero .actions { display: none; } }
+/* Treatments jump menu: one link per line on phones */
+@media (max-width: 700px) { .jump { flex-direction: column; flex-wrap: nowrap; gap: 0.6rem; } }
