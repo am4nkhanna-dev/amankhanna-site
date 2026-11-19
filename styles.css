@@ -458,3 +458,6 @@ html { overflow-x: clip; }
 
 /* Anchor jumps stop below the sticky header */
 #request { scroll-margin-top: 2.75rem; }
+
+/* Treatment headings land the same distance below the header whichever one is clicked */
+.tsec + .tsec { scroll-margin-top: calc(92px - clamp(1.5rem, 3vw, 2.25rem)); }
