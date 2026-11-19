@@ -455,3 +455,7 @@ html { overflow-x: clip; }
   .hero-stack { grid-template-columns: minmax(0, 1fr) 500px; }
   .hero-photo { width: 500px; }
 }
+
+/* Anchor jumps stop below the sticky header */
+html { scroll-padding-top: 4.5rem; }
+#request { scroll-margin-top: 4.5rem; }
