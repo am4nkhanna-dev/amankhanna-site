@@ -445,3 +445,13 @@ html { overflow-x: clip; }
 @media (min-width: 901px) {
   .hero-photo { align-self: start; height: auto; aspect-ratio: 900 / 1368; object-fit: contain; }
 }
+
+/* Wider desktop photo so it ends nearer the foot of the ratings column */
+@media (min-width: 901px) {
+  .hero-stack { grid-template-columns: minmax(0, 1fr) 460px; }
+  .hero-photo { width: 460px; }
+}
+@media (min-width: 1200px) {
+  .hero-stack { grid-template-columns: minmax(0, 1fr) 500px; }
+  .hero-photo { width: 500px; }
+}
