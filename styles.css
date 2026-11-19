@@ -417,3 +417,8 @@ html { overflow-x: clip; }
 .portrait { aspect-ratio: 1 / 1; }
 
 .portrait { aspect-ratio: 5 / 4; }
+
+/* Full-length portraits */
+.hero-photo { aspect-ratio: 4 / 5; max-width: 440px; object-position: 50% 20%; }
+@media (max-width: 900px) { .hero-photo { max-width: 340px; justify-self: center; } }
+.portrait { aspect-ratio: 4 / 5; }
