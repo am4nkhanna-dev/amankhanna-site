@@ -626,3 +626,5 @@ h2 a.h-link, h2 a.h-link:hover, h2 a.h-link:focus-visible { color: inherit; }
   .chips.stacked { flex-direction: column; align-items: flex-start; gap: 0.6rem; margin-top: 0.4rem; }
   .chips.stacked li { font-size: 1.05rem; padding: 0.4rem 1.1rem; }
 }
+
+@media (max-width: 900px) { .split.swap > .stack:last-child { order: -1; } }
