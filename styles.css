@@ -628,3 +628,10 @@ h2 a.h-link, h2 a.h-link:hover, h2 a.h-link:focus-visible { color: inherit; }
 }
 
 @media (max-width: 900px) { .split.swap > .stack:last-child { order: -1; } }
+
+/* Fees and booking: tighter gap between the two bands, plain all-inclusive list */
+.band-top { padding-bottom: clamp(1.25rem, 3vw, 2rem); }
+.band-bottom { padding-top: clamp(1.25rem, 3vw, 2rem); }
+.allin.plain h3 { font-weight: 700; }
+.allin.plain li { padding-left: 0; font-weight: 400; }
+.allin.plain li::before { content: none; }
