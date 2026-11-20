@@ -523,8 +523,8 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 
 /* Home: heading on the left, intro on the right, lined up with the cards below */
 @media (min-width: 901px) {
-  :root { --areas-cols: minmax(0, 295fr) minmax(0, 215fr) minmax(0, 245fr) minmax(0, 240fr); }
-  .areas { grid-template-columns: var(--areas-cols); column-gap: 1.75rem; }
+  :root { --fees-cols: minmax(0, 295fr) minmax(0, 215fr) minmax(0, 245fr) minmax(0, 240fr); }
+  .areas { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 2rem; }
   .band-head.split-head { max-width: none; grid-template-columns: var(--areas-cols); column-gap: 1.75rem; align-items: center; }
   .band-head.split-head h2 { grid-column: 1 / span 2; max-width: none; }
   .band-head.split-head p { grid-column: 3 / span 2; text-wrap: balance; }
@@ -602,7 +602,7 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 .fees-split .allin { max-width: none; }
 .fees-split .allin li { font-size: 1.1rem; }
 @media (min-width: 901px) {
-  .fees-split { grid-template-columns: var(--areas-cols); column-gap: 1.75rem; }
+  .fees-split { grid-template-columns: var(--fees-cols); column-gap: 1.75rem; }
   .fees-split .fees { grid-column: 1 / span 2; }
   .fees-split .allin { grid-column: 3 / span 2; }
 }
