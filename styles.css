@@ -452,8 +452,8 @@ html { overflow-x: clip; }
   .hero-photo { width: 460px; }
 }
 @media (min-width: 1200px) {
-  .hero-stack { grid-template-columns: minmax(0, 1fr) 500px; }
-  .hero-photo { width: 500px; }
+  .hero-stack { grid-template-columns: minmax(0, 1fr) 450px; }
+  .hero-photo { width: 450px; }
 }
 
 /* Anchor jumps stop below the sticky header */
