@@ -474,19 +474,22 @@ html { overflow-x: clip; }
 }
 
 /* Page title banners are centred on every page */
-.page-head .wrap { text-align: center; }
-.page-head h1, .page-head .lead { margin-inline: auto; }
+@media (min-width: 901px) {
+  .page-head .wrap { text-align: center; }
+  .page-head h1, .page-head .lead { margin-inline: auto; }
+}
 
-.band-head.centred { margin-inline: auto; text-align: center; }
+@media (min-width: 901px) { .band-head.centred { margin-inline: auto; text-align: center; } }
 
-.jump { justify-content: center; text-align: center; }
-@media (max-width: 700px) { .jump { align-items: center; } }
+@media (min-width: 901px) { .jump { justify-content: center; text-align: center; } }
 
 /* Locations: headings centred, the two NHS hospitals centred as a pair */
-.band-head.wide.centred { max-width: none; }
-.places-nhs { max-width: 56rem; margin-inline: auto; }
-.places-nhs .place { text-align: center; justify-items: center; }
-.band-head.centred p { text-wrap: balance; line-height: 1.75; }
+@media (min-width: 901px) { .band-head.wide.centred { max-width: none; } }
+@media (min-width: 901px) {
+  .places-nhs { max-width: 56rem; margin-inline: auto; }
+  .places-nhs .place { text-align: center; justify-items: center; }
+}
+@media (min-width: 901px) { .band-head.centred p { text-wrap: balance; line-height: 1.75; } }
 
 /* Treatments: section links stay in reach once the page has scrolled past the top list */
 .side-jump { position: fixed; z-index: 30; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); display: grid; justify-items: end; gap: 0.5rem; }
