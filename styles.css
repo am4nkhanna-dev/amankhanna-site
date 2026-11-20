@@ -606,3 +606,10 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
   .fees-split .fees { grid-column: 1 / span 2; }
   .fees-split .allin { grid-column: 3 / span 2; }
 }
+.hero-note { margin-left: 6px; width: min(378px, calc(100% - 6px)); }
+@media (min-width: 901px) {
+  .fees-split { align-items: stretch; }
+  .fees-split .fees { grid-auto-rows: 1fr; }
+  .fees-split .fee { align-content: center; align-items: center; }
+  .fees-split .fee .amount { font-size: 3rem; }
+}
