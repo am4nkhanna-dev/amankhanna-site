@@ -615,3 +615,14 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 }
 h2 a.h-link, h2 a.h-link:hover, h2 a.h-link:focus-visible { color: inherit; }
 .band h2 a.h-link, .band h2 a.h-link:hover, .band h2 a.h-link:focus-visible { color: inherit; }
+
+/* Home: the "What Mr Khanna treats" heading sits level with the middle of its intro paragraph */
+@media (min-width: 901px) {
+  .band-head.split-head h2, .band-head.split-head p { margin: 0; align-self: center; }
+}
+
+/* Fees and booking: the insurers are listed one per line */
+@media (min-width: 901px) {
+  .chips.stacked { flex-direction: column; align-items: flex-start; gap: 0.6rem; margin-top: 0.4rem; }
+  .chips.stacked li { font-size: 1.05rem; padding: 0.4rem 1.1rem; }
+}
