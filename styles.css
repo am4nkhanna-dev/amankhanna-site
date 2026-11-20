@@ -490,7 +490,9 @@ html { overflow-x: clip; }
 
 /* Treatments: section links stay in reach once the page has scrolled past the top list */
 .side-jump { position: fixed; z-index: 30; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); display: grid; justify-items: end; gap: 0.5rem; }
-.side-jump[hidden] { display: none; }
+.side-jump { opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s; }
+.side-jump.show { opacity: 1; visibility: visible; }
+@media (prefers-reduced-motion: reduce) { .side-jump { transition: none; } }
 .sj-toggle { font: inherit; font-weight: 600; font-size: 0.95rem; color: var(--midnight); background: var(--gold); border: 0; border-radius: 999px; padding: 0.65rem 1.1rem; box-shadow: 0 6px 20px rgba(13, 28, 51, 0.3); cursor: pointer; }
 .sj-list { display: none; background: var(--midnight); border: 1px solid var(--navy-line); border-radius: 8px; padding: 0.5rem; box-shadow: 0 8px 26px rgba(13, 28, 51, 0.35); width: min(17rem, calc(100vw - 32px)); }
 .side-jump.open .sj-list { display: grid; }

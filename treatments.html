@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=d73f16da">
+<link rel="stylesheet" href="styles.css?v=35f2c446">
 
 </head>
 <body>
@@ -165,7 +165,7 @@
 </footer>
 
 
-<nav class="side-jump" id="sideJump" aria-label="Jump to a treatment section" hidden>
+<nav class="side-jump" id="sideJump" aria-label="Jump to a treatment section">
 <button class="sj-toggle" id="sjToggle" type="button" aria-expanded="false" aria-controls="sjList">Jump to</button>
 <div class="sj-list" id="sjList">
 <a href="#nose">Nose and sinuses</a>
@@ -176,7 +176,7 @@
 </div></nav>
 <script>(function(){var nav=document.getElementById('sideJump'),tg=document.getElementById('sjToggle'),jump=document.querySelector('.jump');if(!nav||!jump||!('IntersectionObserver' in window))return;
 var links=[].slice.call(nav.querySelectorAll('.sj-list a'));
-new IntersectionObserver(function(e){var past=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;nav.hidden=!past;if(!past)nav.classList.remove('open')},{threshold:0}).observe(jump);
+new IntersectionObserver(function(e){var past=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;nav.classList.toggle('show',past);if(!past)nav.classList.remove('open')},{threshold:0}).observe(jump);
 tg.addEventListener('click',function(){var o=nav.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false')});
 links.forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');tg.setAttribute('aria-expanded','false')})});
 var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))}).filter(Boolean);
@@ -189,6 +189,6 @@ window.addEventListener('scroll',act,{passive:true});act();})();</script>
     <button type="button" class="cookie-btn cookie-decline" data-choice="declined">Decline</button>
   </div>
 </div>
-<script src="site.js?v=d73f16da"></script>
+<script src="site.js?v=35f2c446"></script>
 </body>
 </html>
