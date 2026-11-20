@@ -559,7 +559,7 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 .allin { border-left: 4px solid var(--gold); padding: 0.25rem 0 0.25rem 1.4rem; max-width: 46rem; display: grid; gap: 0.9rem; }
 .allin h3 { font-size: clamp(1.55rem, 2.4vw, 1.9rem); line-height: 1.15; }
 .allin ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.8rem; }
-.allin li { position: relative; padding-left: 1.4rem; font-size: 1.15rem; line-height: 1.5; color: var(--ink); text-wrap: balance; }
+.allin li { position: relative; padding-left: 1.4rem; font-size: 1.15rem; line-height: 1.5; color: var(--ink); text-wrap: pretty; }
 .allin li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--gold); }
 .allin li:first-child { font-weight: 600; }
 
@@ -576,3 +576,6 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 
 /* Booking page: opening hours on short, even lines */
 .book-list small { line-height: 1.5; }
+
+/* NHS cards are centred, so their map link is too */
+@media (min-width: 901px) { .places-nhs .map-link { justify-self: center; } }
