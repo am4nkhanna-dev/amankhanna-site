@@ -476,3 +476,5 @@ html { overflow-x: clip; }
 /* Page title banners are centred on every page */
 .page-head .wrap { text-align: center; }
 .page-head h1, .page-head .lead { margin-inline: auto; }
+
+.band-head.centred { margin-inline: auto; text-align: center; }
