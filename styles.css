@@ -478,3 +478,6 @@ html { overflow-x: clip; }
 .page-head h1, .page-head .lead { margin-inline: auto; }
 
 .band-head.centred { margin-inline: auto; text-align: center; }
+
+.jump { justify-content: center; text-align: center; }
+@media (max-width: 700px) { .jump { align-items: center; } }
