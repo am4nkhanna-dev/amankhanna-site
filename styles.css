@@ -509,3 +509,4 @@ html { overflow-x: clip; }
 }
 .sj-toggle { order: 2; }
 @media (min-width: 1500px) { .sj-toggle { order: 0; } }
+.band-head.always { margin-inline: auto; text-align: center; }
