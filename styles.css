@@ -486,3 +486,4 @@ html { overflow-x: clip; }
 .band-head.wide.centred { max-width: none; }
 .places-nhs { max-width: 56rem; margin-inline: auto; }
 .places-nhs .place { text-align: center; justify-items: center; }
+.band-head.centred p { text-wrap: balance; line-height: 1.75; }
