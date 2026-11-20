@@ -579,3 +579,30 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
 
 /* NHS cards are centred, so their map link is too */
 @media (min-width: 901px) { .places-nhs .map-link { justify-self: center; } }
+
+/* ===== Refinements, 20 November 2026 (second round) ===== */
+/* Hero note centred under the Doctify rating box */
+.hero-note { justify-self: start; width: min(378px, 100%); text-align: center; }
+
+/* Linked section headings: look unchanged, gold underline on hover and focus */
+.h-link { color: inherit; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 0.14em; transition: text-decoration-color 0.2s ease; }
+.h-link:hover, .h-link:focus-visible { color: inherit; text-decoration-color: var(--gold); }
+
+/* Treatments: heading and description travel together, bullets line up across cards */
+.area { grid-row: span 2; padding-bottom: 0; }
+.area-top { display: grid; gap: 0.55rem; align-content: start; }
+.band-head.split-head { margin-bottom: 2.25rem; }
+@media (min-width: 901px) { .band-head.split-head { align-items: baseline; } }
+
+/* Home fees: cards left, all-inclusive block right, on the treatments grid */
+.fees-split { display: grid; gap: 1.5rem; align-items: start; }
+.fees-split .fees { max-width: none; grid-template-columns: minmax(0, 1fr); }
+.fees-split .fee { grid-template-columns: auto minmax(0, 1fr); align-items: baseline; column-gap: 1.25rem; padding: 1.25rem 1.5rem; }
+.fees-split .fee + .fee { border-left: 0; border-top: 1px solid var(--line); }
+.fees-split .allin { max-width: none; }
+.fees-split .allin li { font-size: 1.1rem; }
+@media (min-width: 901px) {
+  .fees-split { grid-template-columns: var(--areas-cols); column-gap: 1.75rem; }
+  .fees-split .fees { grid-column: 1 / span 2; }
+  .fees-split .allin { grid-column: 3 / span 2; }
+}

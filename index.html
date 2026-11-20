@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=20261120c">
+<link rel="stylesheet" href="styles.css?v=20261120d">
 <script>(function(){var d=document.documentElement,q=false,f=false,m=false,seen=false;try{q=/[?&]intro/.test(location.search);f=/[?&]intro=force/.test(location.search);}catch(e){}try{m=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);}catch(e){}try{seen=!!sessionStorage.getItem('ak-intro');}catch(e){}if(f||(!m&&(q||!seen))){d.classList.add('intro-on');setTimeout(function(){d.classList.remove('intro-on');},14000);}})();</script>
 </head>
 <body>
@@ -68,13 +68,15 @@
 <section class="band">
   <div class="wrap">
     <div class="band-head split-head">
-      <h2>What Mr Khanna treats</h2>
+      <h2><a class="h-link" href="treatments.html">What Mr Khanna treats</a></h2>
       <p class="muted">Most patients come with a blocked nose, sinus trouble, allergy, or a nose they would like to breathe through or look at more comfortably. He also treats snoring and runs a full general ENT practice.</p>
     </div>
     <div class="areas">
       <div class="area">
-        <h3><a href="treatments.html#nose">Nose and sinuses</a></h3>
-        <p>Rhinology, from first assessment to surgery</p>
+        <div class="area-top">
+          <h3><a href="treatments.html#nose">Nose and sinuses</a></h3>
+          <p>Rhinology, from first assessment to surgery</p>
+        </div>
         <ul>
           <li>Blocked nose and deviated septum</li>
           <li>Sinusitis and endoscopic sinus surgery</li>
@@ -83,8 +85,10 @@
         </ul>
       </div>
       <div class="area">
-        <h3><a href="treatments.html#allergy">Nasal allergy</a></h3>
-        <p class="keep-pair">Hay fever, dust mite, pet and mould&nbsp;allergy</p>
+        <div class="area-top">
+          <h3><a href="treatments.html#allergy">Nasal allergy</a></h3>
+          <p class="keep-pair">Hay fever, dust mite, pet and mould&nbsp;allergy</p>
+        </div>
         <ul>
           <li>Allergy testing</li>
           <li>Sprays, tablets and rinses</li>
@@ -93,8 +97,10 @@
         </ul>
       </div>
       <div class="area">
-        <h3><a href="treatments.html#face">Rhinoplasty and facial plastics</a></h3>
-        <p>Surgery that considers how the nose works as well as how it looks</p>
+        <div class="area-top">
+          <h3><a href="treatments.html#face">Rhinoplasty and facial plastics</a></h3>
+          <p>Surgery that considers how the nose works as well as how it looks</p>
+        </div>
         <ul>
           <li>Septorhinoplasty</li>
           <li>Cosmetic rhinoplasty</li>
@@ -103,8 +109,10 @@
         </ul>
       </div>
       <div class="area">
-        <h3><a href="treatments.html#snoring">Snoring, ear and throat</a></h3>
-        <p>Snoring and sleep apnoea, and general ENT care</p>
+        <div class="area-top">
+          <h3><a href="treatments.html#snoring">Snoring, ear and throat</a></h3>
+          <p>Snoring and sleep apnoea, and general ENT care</p>
+        </div>
         <ul>
           <li>Snoring and sleep apnoea</li>
           <li>Hearing loss, ear wax and tinnitus</li>
@@ -119,7 +127,7 @@
 <section class="band dark">
   <div class="wrap split about-two">
     <div class="stack">
-      <h2>About Mr Khanna</h2>
+      <h2><a class="h-link" href="about.html">About Mr Khanna</a></h2>
       <div class="prose">
         <p>Mr Khanna has been a Consultant ENT Surgeon at University Hospitals Birmingham since 2018. Before that he completed a Royal College of Surgeons accredited fellowship in rhinology and sinus surgery at Charing Cross Hospital in London.</p>
         <p>He leads ENT teaching for fourth-year medical students at the University of Birmingham and trains surgeons on sinus surgery and rhinoplasty courses across the Midlands.</p>
@@ -152,7 +160,7 @@
 <section class="band">
   <div class="wrap">
     <div class="band-head" style="max-width:none">
-      <h2 style="max-width:none">Clinics in Birmingham and Droitwich</h2>
+      <h2 style="max-width:none"><a class="h-link" href="locations.html">Clinics in Birmingham and Droitwich</a></h2>
     </div>
     <div class="clinic-strip">
       <a href="locations.html"><img src="assets/hosp-priory.jpg" alt="" width="960" height="600" loading="lazy"><span>The Priory Hospital</span></a>
@@ -165,6 +173,7 @@
 <section class="band mist">
   <div class="wrap stack">
       <h2>Fees</h2>
+      <div class="fees-split">
       <div class="fees">
         <div class="fee"><span class="amount">&pound;350</span><span class="what">New consultation</span></div>
         <div class="fee"><span class="amount">&pound;300</span><span class="what">Follow-up consultation</span></div>
@@ -176,6 +185,7 @@
           <li>Minor operations and other specialised procedures may cost more, and these are always discussed with you beforehand.</li>
           <li>Any charges made by the hospital, such as its facility fee or tests and investigations it carries out, are billed separately by the hospital.</li>
         </ul>
+      </div>
       </div>
       <div class="actions"><a class="btn btn-ink" href="book.html">Fees and booking in full</a></div>
   </div>
