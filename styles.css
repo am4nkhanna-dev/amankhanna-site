@@ -613,3 +613,4 @@ small, .kind, .chips li, .fee .what { text-wrap: balance; }
   .fees-split .fee { align-content: center; align-items: center; }
   .fees-split .fee .amount { font-size: 3rem; }
 }
+h2 a.h-link, h2 a.h-link:hover, h2 a.h-link:focus-visible { color: inherit; }
