@@ -461,3 +461,9 @@ html { overflow-x: clip; }
 
 /* Treatment headings land the same distance below the header whichever one is clicked */
 .tsec + .tsec { scroll-margin-top: calc(92px - clamp(1.5rem, 3vw, 2.25rem)); }
+
+/* About, desktop: photo is as tall as the Practice text beside it */
+@media (min-width: 901px) {
+  .about-grid { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); align-items: stretch; }
+  .about-grid .portrait { margin-top: 0.6rem; height: 0; min-height: calc(100% - 0.6rem); aspect-ratio: auto; object-fit: cover; object-position: 50% 15%; }
+}
