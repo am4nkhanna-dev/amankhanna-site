@@ -639,3 +639,7 @@ h2 a.h-link, h2 a.h-link:hover, h2 a.h-link:focus-visible { color: inherit; }
 /* Doctify note: reads as plain text, turns gold on hover or focus */
 .hero-note a { color: inherit; text-decoration: none; transition: color .15s ease; }
 .hero-note a:hover, .hero-note a:focus-visible { color: var(--gold); }
+
+/* Inline link that reads as plain text and turns gold on hover or focus */
+.text-link { color: inherit; text-decoration: none; transition: color .15s ease; }
+.text-link:hover, .text-link:focus-visible { color: var(--gold); }
